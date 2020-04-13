@@ -1,0 +1,230 @@
+form {
+  background: #fff;
+  box-shadow: 4px 5px 5px #ecedf3;
+  width: 93%;
+  margin: 0 auto;
+
+  @media (min-width: 872px) {
+    max-width: 933px;
+    width: 100%;
+  }
+
+  > div {
+    padding: 20px;
+
+    @media (min-width: 872px) {
+      padding: 30px 50px;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 0;
+  justify-content: space-between;
+
+  @media (min-width: 872px) {
+    flex-wrap: nowrap;
+  }
+
+  .col {
+    width: 100%;
+
+    @media (min-width: 872px) {
+      width: 50%;
+    }
+
+    div {
+      width: 100%;
+    }
+
+    select {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      color: #aeaeba;
+      width: 48%;
+      margin-bottom: 20px;
+      padding: 10px;
+
+      &[name="version"] {
+        width: 100%;
+      }
+      &[name="faixaano"] {
+        margin-right: 15px;
+
+        @media (max-width: 445px) {
+          margin-right: 0;
+        }
+      }
+      &[name="model"] {
+        margin-left: 15px;
+
+        @media (max-width: 445px) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &.btn {
+      display: flex;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 445px) {
+          flex-direction: column-reverse;
+
+          .btn__ofertas {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    &.marginright {
+      margin: 0;
+
+      @media (min-width: 872px) {
+        margin-right: 10px;
+      }
+      @media (max-width: 445px) {
+        .col:last-child {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    &.marginleft {
+      margin: 0;
+
+      @media (min-width: 872px) {
+        margin-left: 10px;
+      }
+
+      > div {
+        @media (max-width: 445px) {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    .location {
+      position: relative;
+      margin-bottom: 24px;
+    
+      img {
+        position: absolute;
+        top: 5px;
+        left: 3px;
+      }
+      input[type="text"] {
+        border: 1px solid #ccc;
+        border-right: 0;
+        color: #aeaeba;
+        padding: 9px;
+        text-indent: 25px;
+        border-radius: 3px 0 0 3px;
+        width: 70%;
+        height: 19px;
+
+        @media (max-width: 445px) {
+          width: 65%;
+        }
+      }
+      select {
+        border-radius: 0 3px 3px 0;
+        width: 25%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn {
+  &__ofertas {
+    display: block;
+    padding: 12px;
+    border: 1px solid #f3123c;
+    border-radius: 4px;
+    background-color: #f3123c;
+    font-weight: 400;
+    letter-spacing: .1em;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    color: #fff;
+    cursor: pointer;
+    width: 66%;
+  }
+  &__limpar {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8b8c99;
+    margin-left: 10px;
+  }
+  &__avancar {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f3123c;
+    display: flex;
+    align-items: center;
+    height: 55px;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+.tipo__carro {
+  display: flex;
+}
+
+label {
+  font-size: 15px;
+  color: #aeaeba;
+  padding-right: 30px;
+  line-height: 18px;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+
+  &.checkbox input[type=checkbox] {
+    cursor: pointer;
+    border-radius: 3px;
+    pointer-events: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    color: #686976;
+    font-size: 12px;
+    -webkit-appearance: none;
+    border: 1px solid #c3c3c3;
+    padding: 0;
+
+    &:checked {
+      + img {
+        display: inline;
+      }
+    }
+  }
+
+  img {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 3px;
+  }
+}
